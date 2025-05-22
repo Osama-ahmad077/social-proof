@@ -1,0 +1,167 @@
+body{
+    height: 100vh;
+    font-family: "league spartan","serif";
+    Font-size: 15px;
+    box-sizing: border-box;
+    text-align: start;
+    padding-top: 8.5%;
+    line-height: 1.73em;
+    background: url("../images/bg-pattern-top-desktop\(1\).svg") left top no-repeat, url(../images/bg-pattern-bottom-desktop\(1\).svg) right bottom no-repeat;
+}
+.container{
+    max-width: 77%;
+    margin: auto;
+    display: grid;
+    grid: 1fr auto / 1fr 1fr 1fr; ;
+    grid-template-areas:"topleft . topright" "bottomleft bottommid bottomright";
+    gap: 10% 2rem;
+}
+.topleft{
+    grid-area: topleft;
+    padding: 0px;
+    width: 120%;
+}
+.head{
+    color:hsl(300, 43%, 22%);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: .83em;
+    letter-spacing: -2px;
+    margin: 0px 0px .5em 0px;
+}
+.head + p{
+    color: hsl(303, 10%, 53%);
+    font-weight: 500;
+    font-size: 1.12rem;
+    width: 105%;
+    word-spacing: -1.4px;
+}
+.topright{
+    grid-area: topright;
+    justify-items:end;
+}
+.toprate, .midrate, .bottomrate{
+    width: 125%;
+    height: 22%;
+    color:hsl(300, 43%, 22%); ;
+    font-weight: 700;
+    background-color: hsl(300, 24%, 96%);
+    font-size: 1.06rem;
+    border-radius: 10px;
+    margin-top: 1em;
+    background: url("../images/icon-star\(1\).svg") 2rem no-repeat, url("../images/icon-star\(1\).svg") 3.5rem no-repeat, url("../images/icon-star\(1\).svg") 5rem no-repeat,url("../images/icon-star\(1\).svg") 6.5rem no-repeat,url("../images/icon-star\(1\).svg") 8rem no-repeat;
+    background-color: hsl(300, 24%, 96%);
+}
+.rate{
+    padding:1.1rem 0rem 1rem 11rem;
+}
+.toprate{
+    transform: translateX(-6rem);
+}
+.midrate{
+    transform: translateX(-3rem);   
+}
+.bottomleft, .bottommid, .bottomright{
+    background-color: hsl(300, 43%, 22%);
+    padding: 2.35rem 1.4rem .8rem 2.2rem;
+    border-radius: 10px;
+    color:hsl(300, 24%, 96%);
+    font-size: 1.01rem;
+}
+.bottomright{
+    grid-area: bottomright;
+    transform: translateY(2rem);
+}
+.bottommid{
+    grid-area: bottommid;
+    transform: translateY(1rem);
+}
+.bottomleft{
+    grid-area: bottomleft;  
+}
+.bottomleft p, .bottommid p, .bottomright p{
+    line-height: 1.35em;
+    margin:1.5em auto;
+    padding-right: 12px;
+}
+.name span{
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: center;
+}
+.name :nth-child(3){
+    color: hsl(330, 36%, 52%);
+    font-size: 1rem;
+}
+img{
+    border-radius:50% ;
+    width: 40px;
+    vertical-align: sub;
+    margin-right: 20px;
+}
+.name{
+    display: inline-block;
+    font-weight: 400;
+    line-height: .7rem ;
+    font-size: 3rem ; 
+}
+@media (min-width:768px){
+    .container{
+        width: 720px;
+    }
+  }
+  @media (min-width:992px){
+    .container{
+        width: 960px;
+    }
+  }
+  @media (min-width:1200px){
+    .container{
+        width: 1120px;
+    }
+}
+@media (max-width:1024px){
+    body{
+        height: 100%;
+        padding: 10vh 6vw 0vh 6vw;
+        background: url("../images/bg-pattern-top-mobile\(1\).svg") left top no-repeat, url(../images/bg-pattern-bottom-mobile\(1\).svg) right bottom no-repeat;  
+    }
+    .container{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .head{
+        font-size: 2.55rem;
+        letter-spacing: -1.5px;
+    }
+    .head + p, .head{
+        text-align: center;
+    }
+    .head {
+        width: 80%;
+    }
+    .head, .topleft{
+        margin: auto;
+    }
+    .topright{
+        margin-bottom: 1.2rem;
+    }
+    .toprate, .midrate, .bottomrate{
+        background:hsl(300, 24%, 96%); 
+        transform: translateX(0px);
+        padding: .3px 0px 0px 0px;
+    }
+    .rate{
+        background: url("../images/icon-star\(1\).svg") 34% top no-repeat, url("../images/icon-star\(1\).svg") 42% top no-repeat, url("../images/icon-star\(1\).svg") 50% top no-repeat,url("../images/icon-star\(1\).svg") 58% top no-repeat,url("../images/icon-star\(1\).svg") 66% top no-repeat;
+        padding:1.5em .5em .5em .5em;
+        text-align: center;
+    } 
+    .bottomleft, .bottommid, .bottomright{
+        transform: translateY(0px);
+        margin-top: 1rem;
+    }
+    .head + p, .topright div,.topleft, .container {
+        width: 100%;
+    }
+}
+
